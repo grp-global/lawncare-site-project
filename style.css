@@ -5,30 +5,58 @@ body {
     box-sizing: border-box;
 }
 
-/* ... (other styles) */
-
 .hero-section {
     background-color: #4CAF50; /* Green */
     color: #FFFFFF;
     padding: 50px;
     text-align: center;
+    background-image: url(/images/pexels-pixabay-33359.jpg);
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-between; /* Distribute items along the main axis */
+    align-items: center; /* Center items along the cross axis */
 }
 
-.gallery-section {
-    background-color: #f2f2f2; /* Light gray */
-    padding: 50px;
-    text-align: center;
-    margin-left: 250px;
-    margin-right: 250px;
+.hero-container {
+    flex: 1;
+    margin: 0 20px;
 }
 
-.image-gallery {
+.logo {
+    height: 100px;
+    width: 100px;
+    fill: limegreen;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: yellow;
+}
+
+
+.image-about {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.image-gallery img {
+.image-about img {
     width: 30%;
     margin: 10px;
 }
