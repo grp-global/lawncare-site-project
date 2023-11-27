@@ -1,79 +1,200 @@
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 .hero-section {
-    background-color: #4CAF50; /* Green */
-    color: #FFFFFF;
-    padding: 50px;
+    background-image: url('/images/grass-01.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
     text-align: center;
-    background-image: url(/images/pexels-pixabay-33359.jpg);
-    display: flex; /* Use flexbox to align items */
-    justify-content: space-between; /* Distribute items along the main axis */
-    align-items: center; /* Center items along the cross axis */
+    padding: 50px 100px;
 }
 
 .hero-container {
-    flex: 1;
-    margin: 0 20px;
+    display: flex;
+    padding: 50px;
 }
 
-.logo {
+.hero-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background-color: forestgreen;
+    padding: 10px;
+}
+
+.hero-container svg {
     height: 100px;
     width: 100px;
     fill: limegreen;
+    background-color: forestgreen;
+    padding: 25px;
+
+}
+
+.header-nav-text {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 3;
+    padding-left: 100px;
+    justify-content: center;
+}
+
+
+.content-container {
+    flex: 2;
+    text-align: center;
+    margin: 0 ; /* Adjust margin as needed */
+    background-color: rgba(34, 139, 34, 70%);
+    padding: 25px 45px;
+}
+
+h1 {
+    font-size: 48px; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Adjust margin as needed */
+
+}
+
+p {
+font-size: 24px;
+}
+
+nav {
+    flex: 3;
 }
 
 nav ul {
     display: flex;
-    justify-content: flex-end; /* Align to the right */
-
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: forestgreen;
+    padding: 10px;
 }
 
 nav ul li {
-    list-style: none;
+    display: inline-block;
+    margin-left: 20px; /* Adjust margin as needed */
 }
 
 nav ul li a {
     text-decoration: none;
-    padding: 10px;
-    color: white;
-    font-weight: bold;
+    color: #ffffff; /* Nav link color */
     font-size: 18px;
 }
 
 nav ul li a:hover {
-    background-color: yellow;
+    color: yellow; /* Nav link color on hover */
 }
 
-
-.image-about {
+.about-section {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
+    padding: 50px 150px;
 }
 
-.image-about img {
-    width: 30%;
-    margin: 10px;
+.about-section div {
+    flex: 1; /* Distribute available space among child divs */
 }
 
-.experience-section {
-    background-color: #FFA500; /* Orange */
-    color: #FFFFFF;
-    padding: 50px;
+.about-section .about-header {
+    order: 2; /* Set the order to 3 for the h2 element */
+    
+}
+
+.about-text-area {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #228b227a;
+    height:80vh;
+}
+
+.about-text-area h2 {
     text-align: center;
+    color: forestgreen;
+
 }
+.about-text-area p {
+    color: forestgreen;
+    padding: 0 50px;
+    flex-wrap: wrap;
+    text-align: left;
+    transform: translatey(-200px);
+}
+
+.about-section .image-about {
+    order: 3 ; /* Set the order to 1 for the image container */
+    flex: 1;
+}
+
+.about-section .image-about img {
+    width: 100%;
+    height: 80vh;
+    align-self: center; /* Center the image in the vertical axis */
+}
+
+.about-section .about-paragraph { 
+    order: ; /* Set the order to 2 for the p element */
+}
+
+/* Services Section */
+
 
 .services-section {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(34, 139, 34, 0.342);
 }
 
+.services-section h2 {
+    text-align: center;
+    color: forestgreen;
+}
+.services-links {
+    height: 35vh;
+    list-style: none;  
+}
+
+.services-links ul {
+    padding-left: 150px;
+    padding-right: 150px;
+    gap: 25px;
+    display: flex;
+    list-style: none;
+    
+    
+}
+
+.services-links  li {
+    flex: 1;
+    height: 30vh;
+}
+
+.services-links a {
+font-size: 24px;
+color: forestgreen;
+padding: 20px;
+text-decoration: none;
+
+}
+
+.services-links img {
+    transform: translateX(-25px);
+    object-fit: contain;
+    max-width: 400px;
+    max-height: 200px;
+}
+
+
+
 .contact-section {
-    background-color: #FFA500; /* Orange */
+    background-color: #f0efed; /* Orange */
     color: #FFFFFF;
     padding: 50px;
     text-align: center;
@@ -90,7 +211,7 @@ form{
 
 
 footer {
-    background-color: #333; /* Dark gray */
+    background-color: forestgreen; /* Dark gray */
     color: #FFFFFF;
     text-align: center;
     padding: 10px;
