@@ -192,7 +192,6 @@ nav ul li a:hover {
     padding-left: 150px;
     padding-right: 150px;
 
-
 }
 
 .contact-form {
@@ -200,7 +199,12 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.contact-form h2, .contact-form p {
+    transform: translateX(-50px);
+}
+
 form {
+    transform: translateX(-50px);
     display: flex;
     flex-direction: column;
     max-width: 500px;
@@ -208,7 +212,6 @@ form {
     padding: 30px;
     background-color: forestgreen;
     border-radius: 5px;
-    border: 2px solid green;
 }
 
 label {
@@ -242,12 +245,20 @@ button:hover {
     height: 400px;
     width: 400px;
 }
+
+.contact-map h2 {
+    text-align: center;
+}
+
+.contact-map p {
+    display: flex;
+    justify-content: center;
+    border: forestgreen 2px solid;
+    padding-bottom: 400px;
+}
 /* ... (styles for other sections) */
 
-#map {
-height: 400px;
-width: 400px;
-}
+
 
 .site-info{
     height: 300px;
