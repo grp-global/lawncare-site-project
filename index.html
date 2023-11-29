@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+        <!-- Include the Google Maps API -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+        <!-- Include your script.js file -->
+        <script src="/script.js"></script>
     <title>LawnCare Hero Page</title>
 </head>
 <body>
@@ -54,21 +59,34 @@
   <!-- Services Section -->
   <section id="services" class="services-section">
     <h2>Our Services</h2>
-    <ul>
-        <div class="services-links">
-            <ul>
-                <li><a href="#lawncare">LawnCare<img src="/images/lawn-house-01.jpg"></a></li>
-                <li><a href="#irrigation">Irrigation<img src="/images/irrigation-01.jpg"></a></li>
-                <li><a href="#pruning">Pruning<img src="/images/pruning-01.jpg"></a></li>
-                <li><a href="#fall">Fall Clean-Up<img src="/images/fall-leaves-01.jpg"></a></li>
-            </ul>
-        </div>
-        <!-- Add more services as needed -->
+    <ul class="services-links">
+        <li>
+            <a href="#lawncare">LawnCare
+                <img src="/images/lawn-house-01.jpg" alt="LawnCare">
+            </a>
+        </li>
+        <li>
+            <a href="#irrigation">Irrigation
+                <img src="/images/irrigation-01.jpg" alt="Irrigation">
+            </a>
+        </li>
+        <li>
+            <a href="#pruning">Pruning
+                <img src="/images/pruning-01.jpg" alt="Pruning">
+            </a>
+        </li>
+        <li>
+            <a href="#fall">Fall Clean-Up
+                <img src="/images/fall-leaves-02.jpg" alt="Fall Clean-Up">
+            </a>
+        </li>
     </ul>
 </section>
 
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
+        <div class="contact-form"  id="form">
         <h2>Contact Us</h2>
         <p>Ready to give your lawn the care it deserves? Reach out to us!</p>
         <form action="#" method="post">
@@ -83,8 +101,32 @@
 
             <button type="submit">Submit</button>
         </form>
+        </div>
+        <div class="contact-map" id="map">Map 
+        </div>
     </section>
 
+    <section class="site-info">
+        <div class="site-info" id="sitemap">
+            <h2>Site Map</h2>
+            <div class="site-info" id="site-info-links">
+                <ul>
+                    <l1><a href="#Home">Home</a></l1>
+                    <l1><a href="#About">About</a></l1>
+                    <l1><a href="#Services">Services</a></l1>
+                    <l1><a href="#Contact">Contact</a></l1>
+                </ul>
+            </div>
+        </div>
+            
+        <div class="site-info" id="biz-info">
+            <div><h2>Business Information</h2></div>
+            <div><p>812.123.4567</p></div>
+            <div><p>Contact@email.com</p></div>
+        </div>
+
+        
+    </section>
   
 
 
