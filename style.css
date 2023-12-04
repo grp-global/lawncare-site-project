@@ -4,6 +4,11 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* Hero Section */
 .hero-section {
     background-image: url('/images/grass-01.jpg');
@@ -324,4 +329,205 @@ footer {
 
 footer p {
     font-size: 18px;
+}
+
+/* Tablet styles (for screens between 420px and 768px) */
+@media screen and (min-width: 421px) and (max-width: 768px) {
+    .hero-section {
+        /* Adjustments for the hero section on tablet screens go here */
+    }
+
+    /* Add more adjustments for other sections as needed */
+}
+
+/* Mobile styles (for screens up to 425px) */
+@media only screen and (max-width: 375px) {
+    /* Adjust layout and styling for mobile devices */
+    body {
+        max-width: 375px;
+        margin: 0;
+        padding: 0;
+    }
+    /* Hero Section */
+    .hero-section {
+        width:25%;
+        height: 400px;
+        background-image: url('/images/grass-01.jpg');
+   
+    }
+
+    .hero-container {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-logo {
+        width: 30%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .hero-container h1 {
+        font-size: 16px;
+        text-align: center;
+        color: white;
+    }
+
+    .hero-section nav {
+        display: none;
+    }
+
+    /* About Section */
+    .about-section {
+        max-width: 81%;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .about-text-area {
+        transform: translate(0, -5px);
+    }
+
+    .about-section .about-header {
+        text-align: center;
+    }
+
+    .about-section p {
+        width: 81%;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        transform: translate(0,5px);
+
+    }
+    .about-section .about-paragraph {
+
+    }
+
+    .about-section .image-about {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Services Section */
+
+    .services-section {
+        max-width: 81%;
+        transform: translate(0,-5px);
+    
+    }
+    .services-section h2 {
+        text-align: center;
+    }
+
+    .services-section .services-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .services-section .services-links li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .services-section .services-links a {
+        text-align: center;
+    } 
+
+    .services-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        transform: translate(0,-5px);
+        max-width: 81%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .contact-form {
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+
+    .contact-form h2 {
+        text-align: center;
+    }
+
+    .contact-form p {
+        text-align: center;
+        color: forestgreen;
+    
+    }
+
+    .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .contact-form input, textarea {
+
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .contact-map {
+        max-width: 81%;
+    }
+
+    .contact-map p {
+        width: 300px;
+    }
+    /* Site Info Section */
+    .site-info {
+        max-width: 81%;
+        display: flex;
+        flex-direction: column;
+        background-color: forestgreen;
+    }
+
+    .site-info h2 {
+        text-align: center;
+    }
+
+    .site-info ul {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .site-info li {
+      
+    }
+
+    .site-info a {
+        color: #007bff;
+    }
+
+    /* Footer Section */
+    footer {
+        max-width: 75.8%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color:forestgreen;
+        text-align: center;
+    }
 }
