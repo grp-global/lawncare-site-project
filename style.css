@@ -242,8 +242,6 @@ button:hover {
 
 .contact-map {
     flex: 1;
-    height: 400px;
-    width: 400px;
 }
 
 .contact-map h2 {
@@ -253,8 +251,11 @@ button:hover {
 .contact-map p {
     display: flex;
     justify-content: center;
-    border: forestgreen 2px solid;
-    padding-bottom: 400px;
+    
+}
+
+.contact-map img {
+    width: 100%;
 }
 
 /* Site Info Section */
@@ -332,25 +333,28 @@ footer p {
 }
 
 /* Tablet styles (for screens between 420px and 768px) */
-@media screen and (min-width: 421px) and (max-width: 768px) {
-    .hero-section {
-        /* Adjustments for the hero section on tablet screens go here */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    
+    * {
+    
     }
-
-    /* Add more adjustments for other sections as needed */
-}
-
-/* Mobile styles (for screens up to 425px) */
-@media only screen and (max-width: 375px) {
-    /* Adjust layout and styling for mobile devices */
     body {
-        max-width: 375px;
+        width: 100vw;
+        min-height: 100%;
         margin: 0;
         padding: 0;
+        border: 1px solid transparent;
+    }
+
+    html {
+        height: 100%;
+    }
+    html, body {
+        width: 100%;
     }
     /* Hero Section */
     .hero-section {
-        width:25%;
+        width: auto;
         height: 400px;
         background-image: url('/images/grass-01.jpg');
    
@@ -364,9 +368,7 @@ footer p {
     }
 
     .hero-logo {
-        width: 30%;
         height: auto;
-        margin-bottom: 20px;
     }
 
     .hero-container h1 {
@@ -379,9 +381,22 @@ footer p {
         display: none;
     }
 
+    .content-container {
+        transform: translate(-50px, 50px);
+        
+    }
+
+    .content-container h1 {
+        display: none;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
     /* About Section */
     .about-section {
-        max-width: 81%;
         display: flex;
         flex-direction: column-reverse;
         padding: 0;
@@ -396,7 +411,6 @@ footer p {
     }
 
     .about-section p {
-        width: 81%;
         color: white;
         font-size: 18px;
         font-weight: 700;
@@ -408,14 +422,12 @@ footer p {
     }
 
     .about-section .image-about {
-        width: 100%;
         height: auto;
     }
 
     /* Services Section */
 
     .services-section {
-        max-width: 81%;
         transform: translate(0,-5px);
     
     }
@@ -431,7 +443,6 @@ footer p {
     }
 
     .services-section .services-links li {
-        width: 100%;
         margin-bottom: 10px;
     }
 
@@ -440,7 +451,8 @@ footer p {
     } 
 
     .services-section img {
-        width: 100%;
+        transform: translate(0,0);
+        width: 200px;
         height: auto;
     }
 
@@ -455,15 +467,21 @@ footer p {
 
     .contact-form {
         background-color: #f2f2f2;
-        padding: 20px;
+        
+    }
+
+    .contact-form form {
+        transform: translate(0.1px,0);
     }
 
     .contact-form h2 {
-        text-align: center;
+
+        font-size: 16px;
     }
 
     .contact-form p {
-        text-align: center;
+        font-size: 14px;
+
         color: forestgreen;
     
     }
@@ -471,10 +489,11 @@ footer p {
     .contact-form label {
         display: block;
         margin-bottom: 5px;
+       
     }
 
-    .contact-form input, textarea {
 
+    .contact-form input, textarea {
         padding: 10px;
         border: 1px solid #ccc;
     }
@@ -488,26 +507,269 @@ footer p {
     }
     
     .contact-map {
-        max-width: 81%;
+
+
     }
 
     .contact-map p {
-        width: 300px;
+        border: none;
+
     }
     /* Site Info Section */
     .site-info {
-        max-width: 81%;
         display: flex;
         flex-direction: column;
-        background-color: forestgreen;
+        border: yellow 5px solid;
     }
 
+    .site-map {
+        border: blue solid;
+    }
+
+    .site-map h2 {
+        text-align: center;
+        color: forestgreen;
+    }
+
+    .site-map ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .site-map li {
+      
+    }
+
+    .site-map a {
+        color: forestgreen;
+    }
+
+    .biz-class {
+    border: blue solid;
+    
+    }
+    .sitemap-logo {
+    border: blue solid;
+    }
+
+    .sitemap-logo svg {
+        fill: red;
+    }
+
+    /* Footer Section */
+    footer {
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color:forestgreen;
+        text-align: center;
+    }
+}
+
+
+/* Mobile styles (for screens up to 425px) */
+@media only screen and (max-width: 425px) {
+    /* Adjust layout and styling for mobile devices */
+    body {
+       display: grid;
+       grid-template-columns:425px;
+        margin: 0;
+        padding: 0;
+    }
+    /* Hero Section */
+    .hero-section {
+    
+        height: 400px;
+        background-image: url('/images/grass-01.jpg');
+   
+    }
+
+    .hero-container {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-logo {
+        height: auto;
+    }
+
+    .hero-container h1 {
+        font-size: 16px;
+        text-align: center;
+        color: white;
+        transform: translate(0,-40px);
+    }
+
+    .hero-section nav {
+        display: none;
+    }
+
+    .content-container {
+        transform: translate(-100px,50px);
+        width: 100%;  
+    }
+
+    .content-container h1 {
+        display: none;
+    }
+
+    .content-container p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    /* About Section */
+    .about-section {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .about-text-area {
+        transform: translate(0, -5px);
+    }
+
+    .about-section .about-header {
+        text-align: center;
+    }
+
+    .about-section p {
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        transform: translate(0,5px);
+
+    }
+    .about-section .about-paragraph {
+
+    }
+
+    .about-section .image-about {
+        height: auto;
+    }
+
+    /* Services Section */
+
+    .services-section {
+        transform: translate(0,-5px);
+    
+    }
+    .services-section h2 {
+        text-align: center;
+    }
+
+    .services-section .services-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .services-section .services-links li {
+        margin-bottom: 10px;
+    }
+
+    .services-section .services-links a {
+        text-align: center;
+    } 
+
+    .services-section img {
+        transform: translate(0,0);
+        width: 400px;
+        height: auto;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: ;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+
+    }
+
+    .contact-form {
+        background-color: #f2f2f2;
+        
+    }
+
+    .contact-form form {
+    
+        transform: translate(0.1px,0);
+    }
+
+    .contact-form h2 {
+        transform: translate(3px,0);
+        font-size: 16px;
+    }
+
+    .contact-form p {
+        transform: translate(3px,0);
+        font-size: 14px;
+
+        color: forestgreen;
+    
+    }
+
+    .contact-form label {
+        display: block;
+       
+    }
+
+
+    .contact-form input, textarea {
+        padding: 10px 0; 
+        border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 0;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .contact-map {
+        text-align: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-map p {
+        
+    
+    }
+
+    .contact-map img {
+    
+        
+    }
+    /* Site Info Section */
+    .site-info {
+        border: green solid;
+        background-color: forestgreen;
+        padding: 20px;
+    }
+
+    .site-map-links {}
+
+    .site-map {
+    padding: 10px;
+
+    }
     .site-info h2 {
         text-align: center;
     }
 
     .site-info ul {
-        text-align: center;
+        display: flex;
+        flex-direction: row;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -518,16 +780,38 @@ footer p {
     }
 
     .site-info a {
-        color: #007bff;
+        padding: 10px;
+        color: white;
     }
 
+    /* Business info section */
+
+    .biz-class {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .biz-class p {
+        padding:0;
+        font-size: 14px;
+    }
+
+    .biz-class svg {
+    width: 50px;
+    height: auto;
+
+    }
     /* Footer Section */
     footer {
-        max-width: 75.8%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        color: white;
         background-color:forestgreen;
         text-align: center;
+    }
+
+    footer p {
+        color: white;
+        margin: 0;
     }
 }
